@@ -3,12 +3,14 @@ import dayjs from 'dayjs';
 import Image from 'next/image';
 import { Button } from './ui/button';
 import Link from 'next/link';
+import { getRandomInterviewCover } from '@/lib/utils';
+import DisplayTechIcons from './DisplayTechIcons';
 
 
 const InterviewCard = ({interviewId,userId,role,type,techstack,createdAt}:InterviewCardProps) => {
     const feedback=null as Feedback | null;
     const normalisedType= /mix/gi.test(type)?"Mixed":type;
-    const formattedData= dayjs(feedback?.createdAt || createdAt || Date.now()).format('MMM D,YYYY')
+    const formattedDate= dayjs(feedback?.createdAt || createdAt || Date.now()).format('MMM D,YYYY')
   return (
     <div className='card-border w-[360px] max-sm:w-full min-h-96'>
         <div className="card-interview">
@@ -18,7 +20,7 @@ const InterviewCard = ({interviewId,userId,role,type,techstack,createdAt}:Interv
             </div>
 
             <Image src={getRandomInterviewCover()} alt="cover image" width={90} height={90}  className='rounded-full object-fit size-[90px]'/>
-
+ 
             <h3 className='mt-5 capitalize'>
                 {role} Interview
             </h3>
@@ -41,7 +43,7 @@ const InterviewCard = ({interviewId,userId,role,type,techstack,createdAt}:Interv
         </div>
 
         <div className='flex flex-row justify-between'>
-            <p>Tech Icons</p>
+            <DisplayTechIcons techStack={techstack}/>
              
              <Button className='btn-primary'>
                 <Link href={feedback ?"/interview/${interviewId}/feedback":"/interview/${interviewId"}>
