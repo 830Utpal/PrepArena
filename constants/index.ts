@@ -203,28 +203,4 @@ export const interviewCovers = [
   "/tiktok.png",
   "/yahoo.png",
 ];
-export const dummyInterviews: Interview[] = [
-  {
-    id: "1",
-    userId: "user1",
-    role: "Frontend Developer",
-    type: "Technical",
-    techstack: ["React", "Typescript", "Next.js", "Tailwind CSS"],
-    level: "Junior",
-    questions: ["What is React?"],
-    finalized: false,
-    createdAt: "2024-03-15T10:00:00Z",
-  },
-  {
-    id: "2",
-    userId: "user2",
-    role: "Backend Developer",
-    type: "Technical",
-    techstack: ["Node.js", "Express", "MongoDB", "AWS"],
-    level: "Mid-level",
-    questions: ["Explain the event loop in Node.js", "What is REST API?"],
-    finalized: true,
-    createdAt: "2024-03-18T15:30:00Z",
-  },
-];
 
