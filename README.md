@@ -16,4 +16,5 @@
 📌 AI Services: Vapi AI, Google Gemini  
 📌 Validation: Zod  
 ```
+Can check out from the deployed link on vercel
 
