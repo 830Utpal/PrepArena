@@ -16,5 +16,8 @@
 📌 AI Services: Vapi AI, Google Gemini  
 📌 Validation: Zod  
 ```
-Can check out from the deployed link on vercel
+Can check out from the deployed link on vercel  
+Made it as a project for solution challenge hackathon - GDG MNNIT ALLAHABAD
+Team name= Hoodie_Dedo
+
 
